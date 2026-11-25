@@ -19,6 +19,7 @@ if (TEXT.length < 1 || TEXT.length > 200 || TEXT.includes("\n") || TEXT.trim().l
 }
 
 function outputPath(): string {
+  // The harness sets MAKEFUN_OUTPUT_DIR; /output is only the local-run default.
   const dir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
   return join(dir, "entry.txt");
 }
